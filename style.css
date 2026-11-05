@@ -1,0 +1,423 @@
+/* ==========================================
+   ANGELINE P
+   AI DATA ANALYST | AI DEVELOPER
+   THEME: DARK NAVY + TEAL + VIOLET
+   ========================================== */
+
+/* 1. GLOBAL SETTINGS */
+
+:root {
+    --navy: #0B1120;
+    --deep-navy: #111B2E;
+    --card-bg: #142137;
+    --teal: #00E5FF;
+    --violet: #8A2BE2;
+    --white: #F5F7FA;
+    --grey: #B8C4D6;
+    --border: #293B56;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* 2. NAVIGATION */
+
+header {
+    background: rgba(11, 17, 32, 0.96);
+    backdrop-filter: blur(15px);
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--teal);
+    letter-spacing: 2px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar ul a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover {
+    color: var(--teal);
+}
+
+/* 3. HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 90px 10%;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 229, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(138, 43, 226, 0.18),
+            transparent 35%
+        ),
+        var(--navy);
+}
+
+.welcome {
+    color: var(--teal);
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        var(--teal),
+        var(--violet)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    color: var(--grey);
+    font-size: 16px;
+}
+
+/* 4. BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.btn {
+    padding: 13px 28px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+
+    background: linear-gradient(
+        100deg,
+        var(--teal),
+        var(--violet)
+    );
+
+    color: var(--navy);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--teal);
+    border: 1px solid var(--teal);
+}
+
+/* 5. GENERAL SECTIONS */
+
+.section {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 35px;
+    margin-bottom: 35px;
+
+    background: linear-gradient(
+        90deg,
+        var(--teal),
+        var(--violet)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section > p {
+    max-width: 850px;
+    margin: 15px auto;
+    color: var(--grey);
+}
+
+/* 6. CARDS */
+
+.card {
+    background: linear-gradient(
+        145deg,
+        var(--card-bg),
+        var(--deep-navy)
+    );
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    margin: 20px auto;
+    max-width: 850px;
+    text-align: left;
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 15px rgba(0, 229, 255, 0.12),
+        0 0 25px rgba(138, 43, 226, 0.12);
+}
+
+.card h3 {
+    color: var(--teal);
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card p,
+.card li {
+    color: var(--grey);
+}
+
+.card ul {
+    padding-left: 22px;
+}
+
+/* 7. TECHNICAL SKILLS */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.skill {
+    padding: 12px 23px;
+    background: var(--card-bg);
+    border: 1px solid var(--teal);
+    border-radius: 30px;
+    color: var(--teal);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: linear-gradient(
+        100deg,
+        var(--teal),
+        var(--violet)
+    );
+
+    color: var(--navy);
+    transform: translateY(-5px);
+}
+
+/* 8. PROJECTS */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.projects-container .card {
+    width: 100%;
+    margin: 0;
+}
+
+.projects-container .card span {
+    display: block;
+    margin-top: 15px;
+    color: var(--violet);
+    font-size: 13px;
+}
+
+/* 9. CERTIFICATIONS */
+
+#certifications .card {
+    max-width: 850px;
+}
+
+#certifications li {
+    margin-bottom: 13px;
+}
+
+/* 10. CONTACT */
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    padding: 12px 27px;
+    border: 1px solid var(--teal);
+    border-radius: 7px;
+    color: var(--teal);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: var(--teal);
+    color: var(--navy);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+/* 11. FOOTER */
+
+footer {
+    background: var(--deep-navy);
+    border-top: 1px solid var(--border);
+    padding: 28px;
+    text-align: center;
+    color: var(--grey);
+    font-size: 13px;
+}
+
+/* 12. ANIMATIONS */
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px var(--teal);
+    }
+
+    50% {
+        text-shadow:
+            0 0 15px var(--teal),
+            0 0 25px var(--violet);
+    }
+
+    100% {
+        text-shadow: 0 0 5px var(--teal);
+    }
+}
+
+.logo {
+    animation: glow 3s infinite;
+}
+
+/* 13. RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 60px 7%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* 14. ACCESSIBILITY */
+
+a:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--violet);
+    color: var(--white);
+}
